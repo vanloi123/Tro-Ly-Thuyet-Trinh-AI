@@ -88,7 +88,7 @@ if "GEMINI_KEY" in st.secrets:
     MY_GEMINI_KEY = st.secrets["GEMINI_KEY"]
 else:
     # Key dự phòng (chỉ dùng khi chạy trên máy cá nhân)
-    MY_GEMINI_KEY = "AIzaSyAczYDWBottda7vVZF5gVO8kx-PRpD2-WM"
+    MY_GEMINI_KEY = "AIzaSyAqMvQNweobJTEOv8I54JpS56pmwpbB8yE"
 ai_ready = False
 if MY_GEMINI_KEY:
     try:
@@ -464,3 +464,4 @@ if uploaded_file:
         if pdf_bytes:
 
             st.download_button(label="📥 Tải Báo cáo PDF", data=pdf_bytes, file_name="baocao_danhgia.pdf", mime="application/pdf")
+
