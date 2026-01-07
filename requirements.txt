@@ -1,0 +1,11 @@
+streamlit
+opencv-python-headless
+numpy
+google-generativeai
+moviepy
+imageio-ffmpeg
+openai-whisper
+librosa
+mediapipe
+plotly
+fpdf
