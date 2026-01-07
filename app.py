@@ -83,7 +83,12 @@ if os.path.exists(local_ffmpeg):
     os.environ["PATH"] += os.pathsep + current_dir
 
 # --- API KEY ---
-MY_GEMINI_KEY = "AIzaSyAczYDWBottda7vVZF5gVO8kx-PRpD2-WM" 
+# Lấy key từ hệ thống bảo mật của Streamlit
+if "GEMINI_KEY" in st.secrets:
+    MY_GEMINI_KEY = st.secrets["GEMINI_KEY"]
+else:
+    # Key dự phòng (chỉ dùng khi chạy trên máy cá nhân)
+    MY_GEMINI_KEY = "AIzaSyAczYDWBottda7vVZF5gVO8kx-PRpD2-WM"
 ai_ready = False
 if MY_GEMINI_KEY:
     try:
@@ -457,4 +462,5 @@ if uploaded_file:
             st.warning("⚠️ Cảnh báo: Mạng đang chặn tải Font. PDF được xuất dưới dạng KHÔNG DẤU để tránh lỗi.")
             
         if pdf_bytes:
+
             st.download_button(label="📥 Tải Báo cáo PDF", data=pdf_bytes, file_name="baocao_danhgia.pdf", mime="application/pdf")
