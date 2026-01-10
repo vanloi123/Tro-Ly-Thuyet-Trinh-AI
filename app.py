@@ -343,10 +343,10 @@ if uploaded_file:
         st.markdown(f"**Tên video chấm:** `{uploaded_file.name}`")
         st.info("""
         **Hệ thống sẽ phân tích:**
-        1. 👁️ **Giao tiếp mắt:** Mức độ tự tin của người trình bày.
-        2. 👐 **Ngôn ngữ cơ thể:** Sự linh hoạt của tay và vai.
-        3. 🔉 **Giọng điệu:** Cảm xúc và điểm nhấn trong giọng nói.
-        4. 📝 **Nội dung:** Cấu trúc bài nói theo mục tiêu đề ra.
+        1.  **Giao tiếp mắt:** Mức độ tự tin của người trình bày.
+        2.  **Ngôn ngữ cơ thể:** Sự linh hoạt của tay và vai.
+        3.  **Giọng điệu:** Cảm xúc và điểm nhấn trong giọng nói.
+        4.  **Nội dung:** Cấu trúc bài nói theo mục tiêu đề ra.
         """)
         analyze_btn = st.button("BẮT ĐẦU CHẤM ĐIỂM NGAY", width='stretch')
 
@@ -464,4 +464,5 @@ if uploaded_file:
         if pdf_bytes:
 
             st.download_button(label="📥 Tải Báo cáo PDF", data=pdf_bytes, file_name="baocao_danhgia.pdf", mime="application/pdf")
+
 
